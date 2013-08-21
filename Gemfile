@@ -23,6 +23,7 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.11'
   gem 'pry-rails'
   gem 'sqlite3'
+  gem 'dotenv-rails'
 end
 
 group :test do
@@ -37,6 +38,7 @@ end
 
 gem 'carrierwave'
 # gem 'rmagick'
+gem 'fog'
 
 gem 'jquery-rails'
 
