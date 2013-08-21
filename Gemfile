@@ -30,6 +30,11 @@ group :test do
   gem 'factory_girl', '2.6.4'
 end
 
+group :production do
+  gem 'pg'
+  gem 'unicorn'
+end
+
 gem 'carrierwave'
 # gem 'rmagick'
 
