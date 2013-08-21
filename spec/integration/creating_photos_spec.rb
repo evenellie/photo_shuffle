@@ -8,8 +8,10 @@ feature 'Uploading Photos' do
 
   scenario "can upload a photo" do
     click_link 'Upload Photos'
-    attach_file "Photo 1", File.expand_path('spec/fixtures/photo_1.jpg')
-    within("#photos") {page.should have_content("photo_1.jpg")}
+    click_link "Choose File"
+    attach_file "map", File.expand_path('spec/fixtures/map.png')
+    click_link "Create Photo"
+    within("#photos") {page.should have_content("map.png")}
   end
 
 end

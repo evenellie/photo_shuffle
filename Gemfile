@@ -30,6 +30,8 @@ group :test do
   gem 'factory_girl', '2.6.4'
 end
 
+gem 'carrierwave'
+# gem 'rmagick'
 
 gem 'jquery-rails'
 

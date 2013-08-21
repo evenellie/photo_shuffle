@@ -1,0 +1,6 @@
+<%= form_for @photo, html: {mulitpart: true} do |f| %>
+
+  <%= f.file_field :image, id: "file_field" %>
+
+  <%= f.submit %>
+<% end %>

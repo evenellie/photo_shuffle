@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+#photo {
+  height: 200px;
+  float: left;
+  margin: 1em;
+}
