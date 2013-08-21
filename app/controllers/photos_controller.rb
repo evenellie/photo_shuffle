@@ -9,12 +9,7 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(params[:photo])
-    if @photo.save
-      redirect_to photos_path
-    else
-      render action: new
-    end
+    @photo = Photo.create(params[:photo])
   end
 
 end

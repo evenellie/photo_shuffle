@@ -1,9 +1,16 @@
 <%= link_to "Upload Photos", new_photo_path %>
 
-<% @photos.each do |photo| %>
-  <div class="photo">
-    <%= photo.file_name %>
-    <%= image_tag photo.image_url.to_s, id: "photo" %>
-  </div>
+<%= form_for Photo.new, html: {mulitpart: true} do |f| %>
+  <%= f.file_field :image, multiple: true, name: "photo[image]", id: "file_field" %>
 <% end %>
+
+<div id = "photos">
+  <% @photos.each do |photo| %>
+  <div class="photo">
+    <!-- #photo.file_name -->
+    <%= image_tag photo.image_url.to_s, id: "photo_image" %>
+</div>
+
+  <% end %>
+</div>
 

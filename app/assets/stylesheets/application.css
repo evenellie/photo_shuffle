@@ -11,8 +11,11 @@
  *= require_self
  *= require_tree .
  */
-#photo {
+#photo_image {
   height: 200px;
   float: left;
   margin: 1em;
+}
+.photo {
+  border: 1px 1px black;
 }
