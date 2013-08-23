@@ -23,8 +23,11 @@ bundle exec sidekiq
 rails server
 ```
 
-## Known Issues
+## Screenshot
+Here's a screenshot of the app in action:
+![Screenshot of Photo Shuffle](homepage_screenshot.png)
 
+## Known Issues
 If you discover any bugs, feel free to create an issue on GitHub fork and
 send a pull request.
 
