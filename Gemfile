@@ -39,8 +39,11 @@ end
 gem 'carrierwave'
 # gem 'rmagick'
 gem 'fog'
-
+gem 'carrierwave_direct'
+gem 'sidekiq'
 gem 'jquery-rails'
+gem 'sinatra', require: false
+gem 'slim'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
