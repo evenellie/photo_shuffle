@@ -37,7 +37,6 @@ group :production do
 end
 
 gem 'carrierwave'
-# gem 'rmagick'
 gem 'fog'
 gem 'carrierwave_direct'
 gem 'sidekiq'

@@ -3,7 +3,7 @@
 <%= form_for @photo do |f| %>
   <%= f.hidden_field :key %>
 
-  <%= f.label :file_name %><br>
+  <%= f.label :file_name, "Photo Label:" %><br>
   <%= f.text_field :file_name %>
 
   <%= f.submit %>

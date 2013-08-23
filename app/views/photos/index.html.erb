@@ -1,25 +1,21 @@
-<!--  form_for Photo.new, html: {mulitpart: true} do |f|
-  f.file_field :image, multiple: true, name: "photo[image]", id: "file_field"
- end -->
+<div id ="upload_section">
+  <h2>Add a Picture:</h2>
 
-<%= direct_upload_form_for @uploader do |f| %>
-  <p><%= f.file_field :image %></p>
-  <p><%= f.submit "Upload One Image" %></p>
-<% end %>
-
-<div id = "photos">
-  <% @photos.each do |photo| %>
-  <div class="photo">
-    <%= photo.file_name%>
-    <%= photo.image_name %>
-    <%= link_to image_tag(photo.image_url, id: "photo_image"), (photo if photo.image?) %>
-  </div>
+  <%= direct_upload_form_for @uploader do |f| %>
+    <p><%= f.file_field :image %></p>
+    <p><%= f.submit "Upload your picture" %></p>
   <% end %>
+
 </div>
 
-<script id="template-upload" type="text/x-tmpl">
-  <div class="upload">
-    {%=o.name%}
-    <div class="progress"><div class="bar" style="width: 0%;"></div></div>
+<% @photos.each do |photo| %>
+  <div class="photo">
+
+    <p>
+      <%= photo.file_name %>: <%= photo.image_name %>
+    </p>
+
+    <%= image_tag(photo.image_url, class: "photo_image") %>
+
   </div>
-</script>
+<% end %>
